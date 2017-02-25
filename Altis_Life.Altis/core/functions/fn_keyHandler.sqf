@@ -55,13 +55,17 @@ if (life_container_active) then {
 };
 
 switch (_code) do {
-    // -- Disable commander/tactical view
-    if (LIFE_SETTINGS(getNumber,"disableCommanderView") isEqualTo 1) then {
-        private _CommandMode = actionKeys "tacticalView";
-
-        if (_code in _CommandMode) then {
-            hint localize "STR_NOTF_CommanderView";
-            _handled = true;
+    //3 Market
+    case 4:
+    {
+        if (playerSide == civilian && player getVariable["restrained",false]) then
+        {
+            hint "You cannot open the market when you're restrained!";
+        }
+        else
+        {
+            if (dialog) exitWith {};
+            [] call life_fnc_OpenEconomy;
         };
     };
 

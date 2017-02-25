@@ -94,6 +94,13 @@ class CfgFunctions {
             class houseGarage {};
         };
 
+        class Economy {
+            file = "\life_server\Functions\Economy";
+            class adjustPrices {};
+            class loadPrices {};
+            class syncPrices {};
+        };
+
         class Gangs {
             file = "\life_server\Functions\Gangs";
             class insertGang {};
