@@ -24,7 +24,7 @@
 #define CONST(var1,var2) var1 = compileFinal (if (var2 isEqualType "") then {var2} else {str(var2)})
 #define CONSTVAR(var) var = compileFinal (if (var isEqualType "") then {var} else {str(var)})
 #define FETCH_CONST(var) (call var)
-#define EXTDB "extDB2" callExtension
+#define EXTDB "extDB3" callExtension
 #define EXTDB_SETTING(TYPE,SETTING) TYPE(missionConfigFile >> "CfgServer" >> SETTING)
 #define EXTDB_FAILED(MESSAGE) \
     life_server_extDB_notLoaded = [true,##MESSAGE]; \
@@ -62,6 +62,3 @@
 #define M_CONFIG(TYPE,CFG,CLASS,ENTRY) TYPE(missionConfigFile >> CFG >> CLASS >> ENTRY)
 #define BASE_CONFIG(CFG,CLASS) inheritsFrom(configFile >> CFG >> CLASS)
 #define LIFE_SETTINGS(TYPE,SETTING) TYPE(missionConfigFile >> "Life_Settings" >> SETTING)
-
-//Map Macros
-#define ALTIS_TANOA(var1,var2) if (worldName isEqualTo "Altis") then {var1} else {var2}
