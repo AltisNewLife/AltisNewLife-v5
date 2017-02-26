@@ -56,8 +56,8 @@ if (!(_sellPrice isEqualType 0) || _sellPrice < 1) then {_sellPrice = 500;};
 if (!(_retrievePrice isEqualType 0) || _retrievePrice < 1) then {_retrievePrice = 500;};
 
 (CONTROL(2800,2803)) ctrlSetStructuredText parseText format [
-    (localize "STR_Shop_Veh_UI_RetrievalP")+ " <t color='#8cff9b'>$%1</t><br/>
-    " +(localize "STR_Shop_Veh_UI_SellP")+ " <t color='#8cff9b'>$%2</t><br/>
+    (localize "STR_Shop_Veh_UI_RetrievalP")+ " <t color='#8cff9b'>%1 €</t><br/>
+    " +(localize "STR_Shop_Veh_UI_SellP")+ " <t color='#8cff9b'>%2 €</t><br/>
     " +(localize "STR_Shop_Veh_UI_Color")+ " %8<br/>
     " +(localize "STR_Shop_Veh_UI_MaxSpeed")+ " %3 km/h<br/>
     " +(localize "STR_Shop_Veh_UI_HPower")+ " %4<br/>

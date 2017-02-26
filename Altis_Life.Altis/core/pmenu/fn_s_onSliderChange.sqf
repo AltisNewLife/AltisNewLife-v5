@@ -50,8 +50,8 @@ switch (_mode) do {
             if (_car isKindOf "B_Truck_01_box_F" || _car isKindOf "B_Truck_01_transport_F") then {
                 _fueltank = 450;
             };
-            ctrlSetText[20324,format ["Fuel : %1 liters",round(_value) - (floor(_fuel * _fueltank))]];
-            ctrlSetText [20323,format ["Total : $%1",round (life_fuelPrices * (round(_value) -(floor(_fuel * _fueltank)))) ]];
+            ctrlSetText[20324,format ["Fuel : %1 litres",round(_value) - (floor(_fuel * _fueltank))]];
+            ctrlSetText [20323,format ["Total : %1 €",round (life_fuelPrices * (round(_value) -(floor(_fuel * _fueltank)))) ]];
         } else {
             hint localize "STR_Select_Vehicle_Pump";
         };

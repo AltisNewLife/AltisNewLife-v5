@@ -31,7 +31,7 @@ if (count _array isEqualTo 0) exitwith {};
     if ((_x select 1) > 1 ) then {
         _name = ITEM_NAME(_x select 0);
         _price = _x select 1;
-        _item_list lbAdd format ["%1  ($%2)",(localize _name),[_price] call life_fnc_numberText];
+        _item_list lbAdd format ["%1  (%2 €)",(localize _name),[_price] call life_fnc_numberText];
         _item_list lbSetData [(lbSize _item_list)-1,_x select 0];
         _item_list lbSetValue [(lbSize _item_list)-1,_price];
         _icon = M_CONFIG(getText,"VirtualItems",(_x select 0),"icon");
