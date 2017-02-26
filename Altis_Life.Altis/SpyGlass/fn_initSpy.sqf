@@ -289,5 +289,7 @@ if (getText(configFile >> "CfgFunctions" >> "init") != "A3\functions_f\initFunct
 };
 
 [] execVM "SpyGlass\fn_cmdMenuCheck.sqf";
+/* Custom Bye Variable Check
 [] execVM "SpyGlass\fn_variableCheck.sqf";
+*/
 [] execVM "SpyGlass\fn_menuCheck.sqf";
