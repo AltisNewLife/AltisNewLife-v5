@@ -32,6 +32,17 @@ class playerHUD {
         w = 0.170371 * safezoneW;
         h = 0.0333333 * safezoneH;
     };
+	
+	/* Custom inoDB Watermark */
+	class watermark : life_RscPicture
+    {
+		idc = -1;
+		text = "textures\watermark.paa";
+		x = 0.86 * safezoneW + safezoneX;
+		y = 0.83 * safezoneH + safezoneY;
+		w = 0.12 * safezoneW;
+		h = 0.175 * safezoneH;  
+    };
 
     /* Progress Bars */
     class LIFE_RscProgress_HUDCommon: Life_RscProgress {
