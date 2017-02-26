@@ -227,6 +227,7 @@ class Life_Client_Core {
         class tazeSound {};
         class teleport {};
         class whereAmI {};
+		class markers {}; // Cambriolage alerte
     };
 
     class Gangs {
