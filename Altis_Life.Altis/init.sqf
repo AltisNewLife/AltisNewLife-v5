@@ -10,7 +10,6 @@ StartProgress = false;
 if (hasInterface) then {
     [] execVM "briefing.sqf"; //Load Briefing
 };
-[] execVM "KRON_Strings.sqf";
 
 // Custom sitdown
 MAC_fnc_switchMove = {

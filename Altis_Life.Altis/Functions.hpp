@@ -193,6 +193,7 @@ class Life_Client_Core {
         class fetchDeadGear {};
         class fetchVehInfo {};
         class isDamaged {};
+		class getIndex {};	 // Move client side	
         class giveDiff {};
         class handleDamage {};
         class handleInv {};
@@ -202,6 +203,7 @@ class Life_Client_Core {
         class hudUpdate {};
         class inventoryClosed {};
         class inventoryOpened {};
+		class isNumber {};	 // Move client side
         class isUIDActive {};
         class keyHandler {};
         class loadDeadGear {};
@@ -212,6 +214,7 @@ class Life_Client_Core {
         class numberText {};
         class onFired {};
         class onTakeItem {};
+		class playerQuery {}; // Move client side
         class playerSkins {};
         class playerTags {};
         class postNewsBroadcast {};
@@ -226,6 +229,7 @@ class Life_Client_Core {
         class stripDownPlayer {};
         class tazeSound {};
         class teleport {};
+		class terrainSort {}; // Move client side
         class whereAmI {};
 		class markers {}; // Cambriolage alerte
     };
