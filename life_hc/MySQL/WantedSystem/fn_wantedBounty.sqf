@@ -10,11 +10,13 @@
     Description:
     Checks if the person is on the bounty list and awards the cop for killing them.
 */
-private ["_civ","_cop","_id","_half","_result","_queryResult","_amount"];
-_uid = [_this,0,"",[""]] call BIS_fnc_param;
-_civ = [_this,1,objNull,[objNull]] call BIS_fnc_param;
-_cop = [_this,2,objNull,[objNull]] call BIS_fnc_param;
-_half = [_this,3,false,[false]] call BIS_fnc_param;
+private ["_query","_queryResult","_amount"];
+params [
+    ["_uid","",[""]],
+    ["_civ",objNull,[objNull]],
+    ["_cop",objNull,[objNull]],
+    ["_half",false,[false]]
+];
 if (isNull _civ || isNull _cop) exitWith {};
 
 _query = format ["SELECT wantedID, wantedName, wantedCrimes, wantedBounty FROM wanted WHERE active='1' AND wantedID='%1'",_uid];

@@ -7,9 +7,9 @@
     I forget?
 */
 private ["_unit","_bad","_id","_ret"];
-_unit = [_this,0,objNull,[objNull]] call BIS_fnc_param;
+_unit = param [0,objNull,[objNull]];
 if (isNull _unit) exitWith {};
-_bad = [_this,1,false,[false]] call BIS_fnc_param;
+_bad = param [1,false,[false]];
 _id = owner _unit;
 
 _ret = [_unit] call life_fnc_wantedPerson;

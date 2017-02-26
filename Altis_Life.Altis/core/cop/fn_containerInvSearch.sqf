@@ -7,14 +7,13 @@
     Description:
     Searches the container for illegal items.
 */
-private ["_container","_containerInfo","_value"];
-_container = [_this,0,objNull,[objNull]] call BIS_fnc_param;
+private _container = param [0,objNull,[objNull]];
 if (isNull _container) exitWith {};
 
-_containerInfo = _container getVariable ["Trunk",[]];
+private _containerInfo = _container getVariable ["Trunk",[]];
 if (count _containerInfo isEqualTo 0) exitWith {hint localize "STR_Cop_ContainerEmpty"};
 
-_value = 0;
+private _value = 0;
 _illegalValue = 0;
 {
     _var = _x select 0;

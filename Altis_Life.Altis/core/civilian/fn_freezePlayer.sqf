@@ -7,7 +7,7 @@
     Freezes selected player.
 */
 private ["_admin"];
-_admin = [_this,0,objNull,[objNull]] call BIS_fnc_param;
+_admin = param [0,objNull,[objNull]];
 
 if (life_frozen) then {
     hint localize "STR_NOTF_Unfrozen";
