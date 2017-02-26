@@ -7,7 +7,7 @@
     Description:
     Gets the data for the market item you are looking at
 */
-private["_display","_good","_currgood","_currprice","_recprice","_recchange","_startprice","_startchange","_name"];
+private ["_display","_good","_currgood","_currprice","_recprice","_recchange","_startprice","_startchange","_name"];
 disableSerialization;
 _display = findDisplay 39000;
 _currgood = 39002;
@@ -29,9 +29,9 @@ _good = lbData[39001,(lbCurSel 39001)];
 
 _name = ITEM_NAME(_good select 0);
 
-ctrlSetText[_currgood, format["Current Good: %1",(localize _name)]];
-ctrlSetText[_currprice, format["Current Price: $%1", (_good select 2)]];
-ctrlSetText[_recprice, format["Recent Price: $%1", (_good select 7)]];
-ctrlSetText[_recchange, format["Recent Change: $%1", ((_good select 2) - (_good select 7))]];
-ctrlSetText[_startprice, format["Price at Server Start: $%1", (_good select 8)]];
-ctrlSetText[_startchange, format["Price Change Since Server Start: $%1", ((_good select 2) - (_good select 8))]];
+ctrlSetText[_currgood, format ["Current Good: %1",(localize _name)]];
+ctrlSetText[_currprice, format ["Current Price: $%1", (_good select 2)]];
+ctrlSetText[_recprice, format ["Recent Price: $%1", (_good select 7)]];
+ctrlSetText[_recchange, format ["Recent Change: $%1", ((_good select 2) - (_good select 7))]];
+ctrlSetText[_startprice, format ["Price at Server Start: $%1", (_good select 8)]];
+ctrlSetText[_startchange, format ["Price Change Since Server Start: $%1", ((_good select 2) - (_good select 8))]];

@@ -7,7 +7,7 @@
     Description:
     Updates the variables serverside.
 */
-private["_market","_cfgDelay","_factor","_good","_itemArray","_priceChanges","_delay","_changeco","_endtime","_diff"];
+private ["_market","_cfgDelay","_factor","_good","_itemArray","_priceChanges","_delay","_changeco","_endtime","_diff"];
 params [
     ["_type", 0],
     ["_unit", ObjNull],
@@ -38,9 +38,9 @@ if ((_data isEqualTo "") || (isNull _unit)) exitWith { diag_log "data or unit nu
 
 _unit = owner _unit; //for hack purpose!
 _market = missionNamespace getVariable "MarketPrices";
-_good = missionNamespace getVariable format["%1MarketGoodPrice",_var];
+_good = missionNamespace getVariable format ["%1MarketGoodPrice",_var];
 
-if (isNil "_good") exitWith { diag_log format["ERROR: _good variable was nil in adjust prices. _var = %1", _var]; };
+if (isNil "_good") exitWith { diag_log format ["ERROR: _good variable was nil in adjust prices. _var = %1", _var]; };
 _itemArray = [];
 
 //we check the factor of the object
@@ -49,7 +49,7 @@ if (_factor isEqualTo 0) exitwith {};//the factor 0 is not a real group
 
 {
     if ((_x select 1) isEqualTo _factor) then {
-        _name = format["%1MarketGoodPrice",(_x select 0)];
+        _name = format ["%1MarketGoodPrice",(_x select 0)];
         _itemArray pushBack (missionNamespace getVariable _name);
     };
 } forEach _market;
@@ -90,7 +90,7 @@ _sellingfactor = (count _itemArray) - 1;
     };
 
     _x set [2, _sellprice];
-    _name = format["%1MarketGoodPrice",(_x select 0)];
+    _name = format ["%1MarketGoodPrice",(_x select 0)];
     missionNamespace setVariable [_name,_x];
     publicVariable _name;
 } forEach _itemArray;

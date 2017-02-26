@@ -6,7 +6,7 @@
     Description:
     Opens the Market menu
 */
-private["_display","_units","_type","_sellList","_buyList"];
+private ["_display","_units","_type","_sellList","_buyList"];
 
 
 if ((LIFE_SETTINGS(getNumber, "dynamic_market")) isEqualTo 1) then {

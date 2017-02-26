@@ -8,7 +8,7 @@
     Description:
     Update and fill the Economy gui menu.
 */
-private["_display","_name","_factor","_categories","_goodlist"];
+private ["_display","_name","_factor","_categories","_goodlist"];
 disableSerialization;
 params [
     ["_type", 0],
@@ -36,7 +36,7 @@ _factor = 1;
 {
     if ((_x select 2) > 1 ) then {
         _name = ITEM_NAME((_x select 0));
-        _goodlist lbAdd format["%1",(localize _name)];
+        _goodlist lbAdd format ["%1",(localize _name)];
         _goodlist lbSetData [(lbSize _goodlist)-1,_x select 0];
         _goodlist lbSetValue [(lbSize _goodlist)-1,2*(_x select 6)];
 

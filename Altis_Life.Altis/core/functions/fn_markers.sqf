@@ -35,10 +35,10 @@ _arr params [
 if (isNull _obj) exitWith {};
 private _pos = getPos _obj;
 
-private _marker = createMarkerLocal [format["%1_marker",_obj],_pos];
+private _marker = createMarkerLocal [format ["%1_marker",_obj],_pos];
 _marker setMarkerColorLocal _color;
 _marker setMarkerTypeLocal _type;
-_marker setMarkerTextLocal format["%1",_txt];
+_marker setMarkerTextLocal format ["%1",_txt];
 
 sleep _time;
 

@@ -6,7 +6,7 @@ Author: Derek
 Description:
 Searches through the economy public variables to locate the correct ones
 */
-private["_market","_priceArray","_varname","_itemArray","_shopItems"];
+private ["_market","_priceArray","_varname","_itemArray","_shopItems"];
 params [
     ["_type", 0],
     ["_data", ""]
@@ -23,7 +23,7 @@ switch (_data) do {
             _name = (_x select 0);
             _fact = (_x select 1);
             if (_fact != 0) then {
-                _varname = format["%1MarketGoodPrice",_name];
+                _varname = format ["%1MarketGoodPrice",_name];
                 _priceArray = missionNamespace getVariable (_varname);
                 _itemArray pushBack _priceArray;
             };
@@ -33,7 +33,7 @@ switch (_data) do {
         _shopItems = M_CONFIG(getArray,"VirtualShops",_data, "items");
         if ((LIFE_SETTINGS(getNumber, "dynamic_market")) isEqualTo 1) then {
             {
-                _varname = format["%1MarketGoodPrice",_x];
+                _varname = format ["%1MarketGoodPrice",_x];
                 _priceArray = missionNamespace getVariable (_varname);
                 _itemArray pushBack _priceArray;
             } forEach _shopItems;

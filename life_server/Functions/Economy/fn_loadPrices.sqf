@@ -7,7 +7,7 @@
     Loads the SQL database into the economy variable: marketPrices and dynamically
     created variables for each good.
 */
-private["_marketPrices", "_query", "_tickTime", "_queryResult", "_name"];
+private ["_marketPrices", "_query", "_tickTime", "_queryResult", "_name"];
 
 /*
     Structure of each price variable
@@ -30,7 +30,7 @@ _marketPrices = [];
     _varName = _x select 0;
     _sellPrice = _x select 1;
     _marketPrices pushBack [_varName, ITEM_FACTOR(_varName)];
-    _name = format["%1MarketGoodPrice", _varName];
+    _name = format ["%1MarketGoodPrice", _varName];
     _info = [
                 _varName,
                 ITEM_BUYPRICE(_varName),
