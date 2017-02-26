@@ -54,6 +54,13 @@ if (life_container_active) then {
     true;
 };
 
+//Custom Standup
+if (_code in (actionKeys "MoveForward")) then {
+	if (!isNull life_sitting) then {
+		_handled = true;
+	};
+};
+	
 switch (_code) do {
     //3 Market
     case 4:

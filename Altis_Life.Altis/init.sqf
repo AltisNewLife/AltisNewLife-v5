@@ -12,4 +12,11 @@ if (hasInterface) then {
 };
 [] execVM "KRON_Strings.sqf";
 
+// Custom sitdown
+MAC_fnc_switchMove = {
+ private _object = _this select 0;
+ private _anim = _this select 1;
+ _object switchMove _anim;
+};
+
 StartProgress = true;
