@@ -21,6 +21,15 @@ class SpyGlass {
     };
 };
 
+class Custom {
+	tag = "CS";
+	class functions {
+		file = "Custom";
+		class progressBar {}; // Custom Progress Bar
+		class markers {}; // Cambriolage alerte
+	};
+};
+
 class Life_Client_Core {
     tag = "life";
 
@@ -231,7 +240,6 @@ class Life_Client_Core {
         class teleport {};
 		class terrainSort {}; // Move client side
         class whereAmI {};
-		class markers {}; // Cambriolage alerte
     };
 
     class Gangs {
